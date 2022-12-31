@@ -33,9 +33,9 @@ const ExpenseOverview = () => {
         options={{
           title: 'Recent Expenses',
           tabBarLabel: 'Recent',
-          tabBarIcon: ({color, size}) => {
+          tabBarIcon: ({color, size}) => (
             <Ionicons name="hourglass" size={size} color={color} />
-          },
+          ),
         }}
       />
       <BottomTabs.Screen
@@ -44,9 +44,9 @@ const ExpenseOverview = () => {
         options={{
           title: 'All Expenses',
           tabBarLabel: 'All',
-          tabBarIcon: ({color, size}) => {
+          tabBarIcon: ({color, size}) => (
             <Ionicons name="calendar" size={size} color={color} />
-          },
+          ),
         }}
       />
     </BottomTabs.Navigator>
