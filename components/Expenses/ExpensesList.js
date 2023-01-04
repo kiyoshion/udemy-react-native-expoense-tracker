@@ -1,7 +1,16 @@
-import { FlatList } from "react-native";
+import { FlatList, Text } from "react-native";
+import ExpenseItem from "./ExpenseItem";
 
-export default function ExpensesList() {
+export default function ExpensesList({ expenses }) {
+  const renderExpenseItem = (itemData) => {
+    return <ExpenseItem {...itemData.item} />;
+  }
+
   return (
-    <FlatList />
+    <FlatList
+      data={expenses}
+      renderItem={renderExpenseItem}
+      keyExtractor={(item) => item.id}
+    />
   );
 }
